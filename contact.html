@@ -1,0 +1,152 @@
+<!-- contact page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name='viewport' content='width=device-width' initialscale='1'>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Olivia Gardella</title>
+
+    <!-- TAKE OUT -->
+    <style>
+        .errormsg { 
+        color:red;
+        /*font: Use a Google font*/
+        display:none; } 
+    </style>
+            
+    <script type="text/javascript">
+        function checkForm(){
+            var a = document.getElementById("name")
+            var b = document.getElementById("email")
+            var c = document.getElementById("msg")
+
+            if (a.value.length == 0){
+                document.getElementById("nameerrormsg").style.display = "block"; a = 0;}
+            else {
+                document.getElementById("nameerrormsg").style.display = "none";}
+        
+            if (b.value.length == 0){
+                document.getElementById("emailerrormsg").style.display = "block"; b = 0}
+            else {
+                document.getElementById("emailerrormsg").style.display = "none"; }
+
+            // if (c.value.length == 0){
+            //     document.getElementById("msgerrormsg").style.display = "block"; c = 0}
+            // else {
+            //     document.getElementById("msgerrormsg").style.display = "none"; }
+        
+            if (b == 0 || a == 0){
+                alert("Form is not completed, please complete to submit!")
+                return false;
+            }
+        }  
+    </script>
+
+</head>
+<body class="form-background">
+
+
+
+    <div role="main">
+
+        <a href="#name" class="jump">Jump to Content</a>
+
+
+        <h1> OLIVIA GARDELLA </h1>
+
+        <nav id="region1">
+            <ul>
+                <li><a href = "index.html">Overview</a></li>
+                <li><a href = "avatars.html">Avatars</a></li>
+                <li><a href = "about.html">About</a></li>
+                <li><a href = "contact.html" class="current">Contact</a></li>
+            </ul>
+        </nav>
+
+        <br>
+
+        <p class='form_text'>
+            Let’s shoot together! I am available for everything from headshots for your next theater audition to documenting memories at your next event. For prices I will quote you based on shoot type, length, etc. once contacted. 
+        </p>
+
+        <p class='form_text'>
+            Fill out the form below and I’ll get back to you as soon as possible! Be sure to indicate if you already have a date in mind so I can reserve your place as soon as possible. Looking forward to working with you! 
+        </p>
+        <br>
+
+        <form action = "contactsubmitted.html" onsubmit="return checkForm();">
+            <fieldset>
+                <label>
+                    Name<br>
+                    <input type="text" name="name" placeholder="name" id="name">
+                </label>
+                <p class="errormsg" id="nameerrormsg">Please enter your name!</p>
+                <br><br>
+
+                <label>
+                    Email<br>
+                    <input type="text" name="email" placeholder="email@email.com" id="email">
+                </label>
+                <p class="errormsg" id="emailerrormsg">Please enter your email!</p>
+                <br><br>
+
+                <label>
+                        Phone ( ###-###-#### )<br>
+                        <input type="text" name="phone" placeholder="###-###-####" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                </label>
+                <br><br>
+
+                <div id="check">
+                    <label>
+                        <input type="checkbox" name="subscribe" id="subscribe" onchange="toggleEmail()">
+                        I already know the date I want to shoot
+                    </label>
+                </div>
+                <div id="emailfield">
+                    <label>
+                        Pick your date: 
+                        <input type="date" name="datepick">
+                    </label>
+                </div>
+                <br>
+
+                <label>
+                    Message<br>
+                    <textarea name="message" rows="5" cols="20" id="msg"> </textarea><br>
+                </label>
+                <p class="errormsg" id="msgerrormsg">Please enter a message!</p>
+
+                
+                <input type="submit" value="Submit">
+
+            </fieldset>
+        </form>
+
+        <br>
+
+    </div>
+    
+    <footer class="footer">
+        <a href = "https://www.instagram.com/olivia_gardella/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href = "https://www.linkedin.com/in/oliviagardella/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+    </footer>
+
+
+    <script>
+        $("#subscribe").click(function(){
+          $("#emailfield").toggle("slow");
+        })
+    </script>
+
+
+</body>
+</html>
