@@ -9,11 +9,13 @@
     <meta name='viewport' content='width=device-width' initialscale='1'>
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Fredericka%20the%20Great' rel='stylesheet'>
 
-    <title>Olivia Gardella</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+    
+    <title>BK-201</title>
 
     <!-- TAKE OUT -->
     <style>
@@ -39,11 +41,7 @@
             else {
                 document.getElementById("emailerrormsg").style.display = "none"; }
 
-            // if (c.value.length == 0){
-            //     document.getElementById("msgerrormsg").style.display = "block"; c = 0}
-            // else {
-            //     document.getElementById("msgerrormsg").style.display = "none"; }
-        
+
             if (b == 0 || a == 0){
                 alert("Form is not completed, please complete to submit!")
                 return false;
@@ -61,13 +59,13 @@
         <a href="#name" class="jump">Jump to Content</a>
 
 
-        <h1> OLIVIA GARDELLA </h1>
+        <h1> BK-201</h1>
 
         <nav id="region1">
             <ul>
-                <li><a href = "index.html">Overview</a></li>
+                <li><a href = "index.html">About</a></li>
                 <li><a href = "avatars.html">Avatars</a></li>
-                <li><a href = "about.html">About</a></li>
+                <li><a href = "stats.html">Stats</a></li>
                 <li><a href = "contact.html" class="current">Contact</a></li>
             </ul>
         </nav>
@@ -83,13 +81,15 @@
         </p>
         <br>
 
-        <form action = "contactsubmitted.html" onsubmit="return checkForm();">
-            <fieldset>
+                <form class="contact-form"
+                action="https://formspree.io/xwkwbyjk"
+                method="POST"
+    >           <fieldset>
                 <label>
-                    Name<br>
+                    In-Game Name<br>
                     <input type="text" name="name" placeholder="name" id="name">
                 </label>
-                <p class="errormsg" id="nameerrormsg">Please enter your name!</p>
+                <p class="errormsg" id="nameerrormsg">Please enter your IGN!</p>
                 <br><br>
 
                 <label>
@@ -100,33 +100,21 @@
                 <br><br>
 
                 <label>
-                        Phone ( ###-###-#### )<br>
-                        <input type="text" name="phone" placeholder="###-###-####" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                        Discord Tag <br>
+                        <input type="text" name="phone" placeholder="ID#1234">
                 </label>
                 <br><br>
 
-                <div id="check">
-                    <label>
-                        <input type="checkbox" name="subscribe" id="subscribe" onchange="toggleEmail()">
-                        I already know the date I want to shoot
-                    </label>
-                </div>
-                <div id="emailfield">
-                    <label>
-                        Pick your date: 
-                        <input type="date" name="datepick">
-                    </label>
-                </div>
-                <br>
+
 
                 <label>
                     Message<br>
-                    <textarea name="message" rows="5" cols="20" id="msg"> </textarea><br>
+                    <textarea name="message" rows="5" cols="30" id="msg"> </textarea><br>
                 </label>
                 <p class="errormsg" id="msgerrormsg">Please enter a message!</p>
 
                 
-                <input type="submit" value="Submit">
+                <button type="submit"> Send</button>
 
             </fieldset>
         </form>

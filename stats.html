@@ -1,0 +1,98 @@
+<!-- about page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name='viewport' content='width=device-width' initialscale='1'>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Fredericka%20the%20Great' rel='stylesheet'>
+
+    <title>BK-201</title>
+
+
+    <link href="css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<!-- ADD MAIN TAGS -->
+
+<body>
+
+    <div role="main">
+
+        <a href="#firstimg" class="jump">Jump to Content</a>
+
+
+        <h1> BK-201 </h1>
+
+        <nav id="region1">
+            <ul>
+                <li><a href = "index.html">About</a></li>
+                <li><a href = "avatars.html">Avatars</a></li>
+                <li><a href = "stats.html" class="current">Stats</a></li>
+                <li><a href = "contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <br>
+        
+        <div class="gallery container" id="photos">
+            
+            <a href="images/stats1.PNG" data-lightbox="collection" data-title="This an overview of my general player information" data-alt="Portrait of a man in front of a building" class="vertical" id="firstimg" alt="This an overview of my general player information"><img src="images/stats1.PNG" alt="This an overview of my general player information" ></a>
+
+            <a href="images/profile.jpg" data-lightbox="collection" data-title="This is a snippet of my profile from the app" data-alt="This is a snippet of my profile from the app" class="horizontal"><img src="images/profile.jpg" alt="This is a snippet of my profile from the app" ></a>
+
+            <a href="images/stats2.PNG" data-lightbox="collection" data-title="This shows more detailed information about my stats" data-alt="This shows more detailed information about my stats" class="vertical"><img src="images/stats2.PNG" alt="This shows more detailed information about my stats" ></a>
+
+            <a href="images/BA_lb.PNG" data-lightbox="collection" data-title="This is the distribution of players in the Battle Arena tiers. As you can see, I am currently in the highest tier." data-alt="This is the distribution of players in the Battle Arena tiers. As you can see, I am currently in the highest tier." class="horizontal"><img src="images/BA_lb.PNG" alt="This is the distribution of players in the Battle Arena tiers. As you can see, I am currently in the highest tier."></a>
+            
+            <a href="images/gear.jpg" data-lightbox="collection" data-title="This is my current set of gear, which took nearly 3 months to obtain" data-alt="This is my current set of gear, which took nearly 3 months to obtain" class="vertical"><img src="images/gear.jpg" alt="This is my current set of gear, which took nearly 3 months to obtain"></a>
+            
+            <a href="images/guild.jpg" data-lightbox="collection" data-title="This a solo guild that I created and am the leader of" data-alt="This a solo guild that I created and am the leader of" class="horizontal"><img src="images/guild.jpg" alt="This a solo guild that I created and am the leader of"></a>
+            
+            <a href="images/quest_lb.jpg" data-lightbox="collection" data-title="This is the leaderboard for questing and I am currently at #5" data-alt="This is the leaderboard for questing and I am current at #5" class="vertical"><img src="images/quest_lb.jpg" alt="This is the leaderboard for questing and I am current at #5"></a>
+            
+            <a href="images/level_lb.jpg" data-lightbox="collection" data-title="This is the leaderboard for levels and I am currently at #6" data-alt="This is the leaderboard for levels and I am currently at #6" class="horizontal"><img src="images/level_lb.jpg" alt="This is the leaderboard for levels and I am currently at #6"></a>
+            
+            <a href="images/guild_lb.jpg" data-lightbox="collection" data-title="This is the leaderboard for guilds. With the help of a few people, I was able to get the guild to top 10 within 2 weeks (which would normally take months)." class="vertical"><img src="images/guild_lb.jpg" alt="This is the leaderboard for guilds and my guild is currently at #10"></a>
+
+
+            <!-- <img src = "images/people_1.jpg" class = "vertical" alt = "Portrait of a man in front of a building"/> -->
+            <!-- <img src = "images/people_2.jpg" class = "horizontal" alt = "Portrait of a young man on a boat"/> -->
+            <!-- <img src = "images/people_3.jpg" class = "vertical" alt = "Portrait of a woman in the forest, fashion photography"/> -->
+            <!-- <img src = "images/people_4.jpg" class = "horizontal" alt = "Portrait of a man sitting on a sidewalk, fashion photography"/> -->
+            <!-- <img src = "images/people_5.jpg" class = "vertical" alt = "Portrait of a smiling woman in a studio, fashion photography"/> -->
+            <!-- <img src = "images/people_6.jpg" class = "horizontal" alt = "Portrait of a woman covered in glitter, fashion photography"/> -->
+            <!-- <img src = "images/people_7.jpg" class = "vertical" alt = "Portrait of a young man on a lake at sunset"/>
+            <img src = "images/people_8.jpg" class = "horizontal" alt = "Portrait of a man in a studio"/>
+            <img src = "images/people_9.jpg" class = "vertical" alt = "Portrait of a woman in a forest, fashion photography"/> -->
+        </div>
+    </div>
+   
+    
+    <footer class="footer">
+        <a href = "https://www.instagram.com/olivia_gardella/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href = "https://www.linkedin.com/in/oliviagardella/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+    </footer>
+
+            
+
+    <!-- for lightbox -->
+    <script src="js/lightbox.js"></script>
+
+	<script src="js/mixitup.min.js"></script>
+
+	<script>
+		var containerEl = document.querySelector('.container');
+		var mixer = mixitup(containerEl);
+	</script>
+
+
+
+</body>
+</html>
